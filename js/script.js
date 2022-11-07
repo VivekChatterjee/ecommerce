@@ -85,10 +85,10 @@ var swiper = new Swiper(".product-slider", {
         delay: 4000,
         disableOnInteraction: false,
     },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+    // navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    // },
     breakpoints: {
         0: {
             slidesPerView: 1,
