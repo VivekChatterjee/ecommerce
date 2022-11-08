@@ -463,9 +463,9 @@ header {
   margin: auto;
 }
 
-.activated {
+/* .activated {
   background-color: #717171;
-}
+} */
 
 /* Fading animation */
 .fade {

@@ -142,10 +142,10 @@ function showSlides() {
     }
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("activated", "");
-    }
+    // for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace("activated", "");
+    // }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " activated";
+    // dots[slideIndex - 1].className += " activated";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
 } 
