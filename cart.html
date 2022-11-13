@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>complete responsive e-commerce website design tutorial</title>
+    <title>ecommerce website</title>
 
     <link
       rel="stylesheet"
@@ -18,109 +18,105 @@
     />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/./style.css" />
   </head>
   <body>
     <!-- header section starts  -->
-
     <header>
-      <a href="#" class="logo">elderly<span>.</span></a>
+      <a href="index.html" class="logo">elderly<span>.</span></a>
 
       <!-- <form action="">
         <input type="search" id="search-bar" />
         <label for="search-bar" class="fas fa-search"></label>
       </form> -->
 
-      <div class="navigate">
-        <a href="#products">products</a>
-        <a href="#featured">featured</a>
-        <a href="#deal">deal</a>
-        <a href="#review">review</a>
-      </div>
-
       <div class="icons">
-        <div id="menu-bar" class="fas fa-bars"></div>
+        <div id="menu-bar" class="fas fa-bars nav-toggle" id="nav-toggle"></div>
         <div id="theme-toggler" class="fas fa-moon"></div>
-        <a href="wishlist.html" class="fas fa-heart"></a>
-        <a href="cart.html" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-user"></a>
+        <!-- <a href="#" class="fas fa-heart"></a> -->
+        <div class="cart">
+          <a href="cart.html" class="fas fa-shopping-cart"></a>
+          <div class="cart-amount">0</div>
+        </div>
+        <!-- <a href="#" class="fas fa-user"></a> -->
       </div>
     </header>
-
-    <!-- header section ends -->
 
     <!-- navbar section  -->
 
     <nav class="navbar">
-      <div class="user">
-        <img src="images/user-img.png" alt="" />
-        <h3>shaikh anas</h3>
-      </div>
-
       <div class="links">
-        <a href="#home">home</a>
+        <a href="https://ecommerce-vivek.netlify.app/">home</a>
         <a href="#products">products</a>
         <a href="#featured">featured</a>
-        <a href="#deal">deal</a>
+        <a href="#deal">deals</a>
         <a href="#review">review</a>
       </div>
 
       <div id="close" class="fas fa-times"></div>
     </nav>
+    <!-- navbar section ends  -->
 
-    <section class="products" id="products">
-      <h1 class="heading">cart <span>items</span></h1>
+    <!-- header section ends -->
 
-      </div>
-    </section>
+    <!-- main cart page -->
 
-    <!-- footer section starts  -->
+    <!-- end of main cart page  -->
 
-    <section class="footer">
-      <div class="footer-container">
-        <div class="box-container">
-          <div class="box">
-            <h3>quick links</h3>
-            <a href="#">home</a>
-            <a href="#">products</a>
-            <a href="#">featured</a>
-            <a href="#">deal</a>
-            <a href="#">review</a>
-          </div>
+    <!-- footer -->
+    <footer class="section footer">
+      <!-- footer links  -->
 
-          <div class="box">
-            <h3>extra links</h3>
-            <a href="#">my account</a>
-            <a href="#">my favorite</a>
-            <a href="#">my order</a>
-            <a href="#">my cart</a>
-          </div>
+      <!-- end of footer links -->
 
-          <div class="box">
-            <h3>donwload links</h3>
-            <a href="#">windows store</a>
-            <a href="#">app store</a>
-            <a href="#">google store</a>
-          </div>
+      <ul class="footer-icons">
+        <!-- a single icon  -->
+        <li>
+          <a
+            href="https://www.instagram.com/vivekbossss/"
+            target="_blank"
+            class="footer-icon"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <!-- end of single icon  -->
 
-          <div class="box">
-            <h3>contact us</h3>
-            <a href="#">+123-456-7890</a>
-            <a href="#">example@gmail.com</a>
-            <a href="#">mumbai, india - 400104</a>
-            <img src="images/payment.png" alt="" />
-          </div>
-        </div>
+        <!-- a single icon  -->
+        <li>
+          <a
+            href="https://twitter.com/i_vivek_jsr"
+            target="_blank"
+            class="footer-icon"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <!-- end of single icon  -->
 
-        <div class="credit">
-          created by <span> mr. web designer </span> | all rights reserved
-        </div>
-      </div>
-    </section>
-
+        <!-- a single icon  -->
+        <li>
+          <a
+            href="https://www.linkedin.com/in/vivek-chatterjee-a590421b7"
+            target="_blank"
+            class="footer-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <!-- end of single icon  -->
+      </ul>
+      <p class="owner">Made with ❤️ by Vivek</p>
+      <p class="copyright">
+        copyright &copy; ecommerce website
+        <span id="date"></span> all rights reserved
+      </p>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- custom js file link -->
+    <!-- custom js file links -->
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
