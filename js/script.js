@@ -49,7 +49,7 @@ document.querySelectorAll('.small-image-3').forEach(images => {
     }
 });
 
-let countDate = new Date('nov 10, 2022 00:00:00').getTime();
+let countDate = new Date('nov 18, 2022 00:00:00').getTime();
 
 function countDown() {
 
@@ -148,4 +148,8 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     // dots[slideIndex - 1].className += " activated";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
-} 
+}
+
+
+// main page rendering elements using js to get id name img properties
+

@@ -303,7 +303,8 @@ header form label:hover {
   color: var(--clr-primary-5);
 }
 
-header .icons div,
+header .icons .nav-toggle,
+header .icons .fa-moon,
 header .icons a {
   height: 4rem;
   width: 4rem;
@@ -317,7 +318,8 @@ header .icons a {
   margin-right: 0.7rem;
 }
 
-header .icons div:hover,
+header .icons .nav-toggle:hover,
+header .icons .fa-moon:hover,
 header .icons a:hover {
   background: var(--clr-primary-5);
   color: #fff;
@@ -454,6 +456,33 @@ header {
   margin: 0 5rem;
   display: none;
 }
+
+/* cart and increment number css */
+
+/* icon flex display  */
+header .icons {
+  display: flex;
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-amount {
+  position: absolute;
+  top: -6px;
+  right: -2px;
+  font-size: 16px;
+  line-height: 15px;
+  background-color: #e14d2a;
+  color: var(--clr-white);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+/* end of cart and increment number css */
 
 /* slideshow container  */
 .slideshow-container {
