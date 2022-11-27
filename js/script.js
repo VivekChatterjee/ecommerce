@@ -49,7 +49,7 @@ document.querySelectorAll('.small-image-3').forEach(images => {
     }
 });
 
-let countDate = new Date('nov 18, 2022 00:00:00').getTime();
+let countDate = new Date('dec 25, 2022 00:00:00').getTime();
 
 function countDown() {
 
