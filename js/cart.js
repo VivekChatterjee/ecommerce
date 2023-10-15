@@ -3,61 +3,61 @@ let carts = document.querySelectorAll('.cart-btn')
 let products = [
     {
         name: 'Frame Folding Walker',
-        tag: 'framefoldwalk',
+        tag: 'frame-folding-walker',
         price: 349,
         inCart: 0
     },
     {
         name: 'BP Monitor',
-        tag: 'bpmonitor',
+        tag: 'bp-monitor',
         price: 1099,
         inCart: 0
     },
     {
         name: 'Hearing aid',
-        tag: 'hearaid',
+        tag: 'hearing-aids',
         price: 449,
         inCart: 0
     },
     {
         name: 'Seat cushion',
-        tag: 'seatcushion',
+        tag: 'seat-cushion',
         price: 299,
         inCart: 0
     },
     {
         name: 'Walking Stick',
-        tag: 'walkstick',
+        tag: 'walking-stick',
         price: 599,
         inCart: 0
     },
     {
         name: 'Brand New wheelchair',
-        tag: 'featwheelch',
+        tag: 'wheelchair',
         price: 14999,
         inCart: 0
     },
     {
         name: 'heart rate monitor',
-        tag: 'heartrate',
+        tag: 'heart-rate-monitor',
         price: 1499,
         inCart: 0
     },
     {
         name: 'wheelchair',
-        tag: 'wheelch',
+        tag: 'wheelchair',
         price: 17999,
         inCart: 0
     },
     {
         name: 'frame folding walker',
-        tag: 'featframefoldwalk',
+        tag: 'frame-folding-walker',
         price: 699,
         inCart: 0
     },
     {
         name: 'walking stick',
-        tag: 'featwalkstick',
+        tag: 'walking-stick',
         price: 599,
         inCart: 0
     },
@@ -127,9 +127,53 @@ function totalCost(product){
     if(cartCost != null){
         cartCost = parseInt(cartCost);
         localStorage.setItem("totalCost", cartCost + product.price);
-    }else{
         localStorage.setItem("totalCost", product.price);
+    }else{
+    }
+}
+
+function displayCart(){
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".products");
+    let cartCost = localStorage.getItem('totalCost');
+
+    
+    if(cartItems && productContainer){
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class="product">
+                <ion-icon name="trash-outline"></ion-icon>
+                <img src="./images/${item.tag}.jpg">
+                <span>${item.name}</span>
+            </div>
+            <div class="price">${item.price},00</div>
+            <div class="quantity>
+                <ion-icon class="decrease "
+                name="arrow-dropleft-circle"></ion-icon>
+                <span>${item.inCart}</span>
+                <ion-icon class="increase"
+                name="arrow-dropright-circle"></ion-icon>
+            </div>
+            <div class="total">
+                $${item.inCart * item.price},00
+            </div>
+            `;
+        });
+        
+        productContainer.innerHTML +=`
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle">
+                    Basket Total
+                </h4>
+                <h4 class="basketTotal">
+                    $${cartCost},00
+                </h4>
+        `
+    
     }
 }
 
 onLoadCartNumbers();
+displayCart();
